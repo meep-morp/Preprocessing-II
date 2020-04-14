@@ -28,27 +28,27 @@ header{
         @media @mobile {
           width: 100%;
           padding: 5%;
+          .flex();
+          flex-direction: column;
         }
     }
-
-
     .img-content {
       width: 48%;
       padding-left: 1%;
 
         @media @mobile {
           width: 100%;
+          .flex();
         }
 
       img {
         border-radius: 10px;
+        margin: 0 auto;
 
-          @media @mobile {
-            padding: 3%;
+        @media @mobile {
 
-      }
-
-      } 
+        }
+      }// img 
 
     }//img content
   }// .content section
@@ -72,6 +72,10 @@ header{
     width: 75%;
     margin: 0 auto 30px;
 
+      @media @mobile {
+        width: 85%;
+      }
+
     img {
       border-radius: 10px;
     }
@@ -83,12 +87,26 @@ header{
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+      flex-direction: column;
+      align-items: center;
+      text-align: justify;
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
 
         button{
           .btn();
+
+            @media @mobile {
+              .btn(15px, 350px,)
+            }
+        }
+
+        @media @mobile {
+          width: 80%;
         }
     }
   }
