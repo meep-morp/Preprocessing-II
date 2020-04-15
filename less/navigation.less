@@ -11,10 +11,7 @@ nav{
 
         @media @mobile {
             flex-direction: column;
-            
-                a{
-                    margin: 30px;
-                }
+
         }//media
     }//nav
         a {
@@ -22,4 +19,18 @@ nav{
             color: @shark;
             font-size: 1.6rem;
             margin: 10px;
+
+            @media @mobile {
+                margin: 30px;
+            }
+
+            @media @450 {
+                margin: 10px;
+            }
+
+            @media @292 {
+                .flex();
+                .btn();
+            }
+
         }//a

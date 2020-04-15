@@ -183,15 +183,34 @@ nav .logo {
   nav {
     flex-direction: column;
   }
-  nav a {
-    margin: 30px;
-  }
 }
 a {
   text-decoration: none;
   color: #212529;
   font-size: 1.6rem;
   margin: 10px;
+}
+@media (max-width: 500px) {
+  a {
+    margin: 30px;
+  }
+}
+@media (max-width: 450px) {
+  a {
+    margin: 10px;
+  }
+}
+@media (max-width: 292px) {
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background-color: #17A2B8;
+    color: #FFFFFF;
+    width: 200px;
+    height: 40px;
+  }
 }
 .footer {
   width: 100%;
@@ -233,72 +252,89 @@ a {
     flex-direction: column;
   }
 }
-.home .content-section .img-content {
+.home .img-content {
   width: 48%;
   padding-left: 1%;
 }
 @media (max-width: 500px) {
-  .home .content-section .img-content {
+  .home .img-content {
     width: 100%;
+  }
+}
+.home .img-content img {
+  border-radius: 10px;
+  margin: 0 auto;
+}
+@media (max-width: 500px) {
+  .home .img-content img {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 }
-.home .content-section .img-content img {
-  border-radius: 10px;
-  margin: 0 auto;
-}
-.home .inverse-content {
+.inverse-content {
   padding-bottom: 30px;
   border-bottom: 2px dashed #C0C0C0;
 }
-.home .inverse-content .text-content {
+@media (max-width: 500px) {
+  .inverse-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+}
+.inverse-content .text-content {
   padding-left: 1%;
   padding-right: 0;
 }
-.home .inverse-content .img-content {
+.inverse-content .img-content {
   padding-right: 1%;
   padding-left: 0;
 }
-.home .content-destination {
+.content-destination {
   width: 75%;
   margin: 0 auto 30px;
 }
 @media (max-width: 500px) {
-  .home .content-destination {
+  .content-destination {
     width: 85%;
   }
 }
-.home .content-destination img {
+.content-destination img {
   border-radius: 10px;
 }
-.home .content-pick {
+.content-pick {
   padding-top: 30px;
   border-top: 2px dashed #C0C0C0;
   display: flex;
   justify-content: space-between;
 }
-@media (max-width: 500px) {
-  .home .content-pick {
+@media (max-width: 650px) {
+  .content-pick {
     flex-direction: column;
     align-items: center;
     text-align: justify;
   }
 }
-.home .content-pick .destination {
+.content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
 }
-.home .content-pick .destination button {
+.content-pick .destination button {
   border-radius: 15px;
   background-color: #17A2B8;
   color: #FFFFFF;
   width: 200px;
   height: 40px;
 }
-@media (max-width: 500px) {
-  .home .content-pick .destination button {
+.content-pick .destination button:hover {
+  color: #212529;
+  background-color: #FFEBCD;
+  transition: 0.5s ease;
+}
+@media (max-width: 650px) {
+  .content-pick .destination button {
     border-radius: 15px;
     background-color: #17A2B8;
     color: #FFFFFF;
@@ -306,8 +342,67 @@ a {
     height: 40px;
   }
 }
-@media (max-width: 500px) {
-  .home .content-pick .destination {
+@media (max-width: 292px) {
+  .content-pick .destination button {
+    border-radius: 10px;
+    background-color: #17A2B8;
+    color: #FFFFFF;
+    width: 200px;
+    height: 40px;
+  }
+}
+@media (max-width: 650px) {
+  .content-pick .destination {
     width: 80%;
   }
+}
+.field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (max-width: 292px) {
+  .field {
+    text-align: center;
+  }
+}
+.field input {
+  margin: 15px;
+  background-color: #17A2B8;
+  color: white;
+  border-radius: 10px;
+}
+.field input:hover {
+  color: #212529;
+  background-color: #FFEBCD;
+  transition: 0.5s ease;
+}
+.field .instructions {
+  height: 50px;
+  width: 200px;
+}
+.field .dropdownbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.field .dropdownbox #vacation {
+  margin: 5px;
+  color: #17A2B8;
+  background-color: #FFEBCD;
+  border-radius: 8px;
+}
+.field .dropdownbox input {
+  border-radius: 15px;
+  background-color: #17A2B8;
+  color: #FFFFFF;
+  width: 150px;
+  height: 25px;
+}
+.field .dropdownbox input:hover {
+  color: #212529;
+  background-color: #FFEBCD;
+  transition: 0.5s ease;
 }

@@ -16,7 +16,15 @@
     height: @height;
 }
 
+.hover(@color, @bgColor, @time, @option){
+    color: @color;
+    background-color: @bgColor;
+    transition: @time @option;
+}
 
 //Media Queries
+@292: ~"(max-width: 292px)";
 @mobile: ~"(max-width: 500px)";
+@450: ~"(max-width: 450px)";
+@650: ~"(max-width: 650px)";
 
