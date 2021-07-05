@@ -1,28 +1,62 @@
 .home {
+  
+header{
 
+  .welcome{
+      margin: 2% 0;
+      border-bottom: 2px silver dashed;
+
+      @media @mobile {
+        padding: 2%;
+      }
+
+  }
+  
+}
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
+      @media @mobile{
+        flex-direction: column;
+    
+      }
    
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+          
+        @media @mobile {
+          width: 100%;
+          padding: 5%;
+          .flex();
+          flex-direction: column;
+          
+        }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
 
+        @media @mobile {
+          width: 100%;
+        }
       img {
         border-radius: 10px;
-      }
-    }
-  }
+        margin: 0 auto;
 
+        @media @mobile {
+          .flex();
+        }
+      }// img 
+
+    }//img content
+  }// .content section
+        
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
@@ -36,11 +70,21 @@
       padding-right: 1%;
       padding-left: 0;
     }
+
+    @media @mobile {
+      flex-direction: column-reverse;
+    }
+
+  }
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+
+      @media @mobile {
+        width: 85%;
+      }
 
     img {
       border-radius: 10px;
@@ -53,9 +97,83 @@
     display: flex;
     justify-content: space-between;
 
+    @media @650 {
+      flex-direction: column;
+      align-items: center;
+      text-align: justify;
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+        button{
+          .btn();
+
+          &:hover{
+            .hover(@font-color, @footer-bg, 0.5s, ease);
+          }
+
+            @media @650{
+              .btn(15px, 350px,)
+            }
+
+            @media @292 {
+
+              .btn(10px, 200px)
+            }
+        }
+
+        @media @650 {
+          width: 80%;
+        }
     }
   }
-}// home
+  .field{
+    .flex();
+    flex-direction: column;
+
+    @media @292 {
+      text-align: center;
+    }
+
+      input{
+        margin: 15px;
+        background-color: @eastern-blue;
+        color: white;
+        border-radius: 10px;
+
+        &:hover{
+          .hover(@font-color, @footer-bg, 0.5s, ease);
+        }
+      }
+
+      .instructions{
+        height: 50px;
+        width: 200px;
+      }
+
+      .dropdownbox{
+        .flex();
+        flex-direction: column;
+
+        #vacation{
+        margin: 5px;
+        color: @eastern-blue;
+        background-color: @footer-bg;
+        border-radius: 8px;
+
+      }
+
+      input{
+        .btn(15px, 150px, 25px);
+
+        &:hover{
+          .hover(@font-color, @footer-bg, 0.5s, ease);
+        }
+      }
+    }
+  }
+
+
+// home

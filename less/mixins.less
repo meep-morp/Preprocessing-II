@@ -1,1 +1,30 @@
 // Mixins in here
+
+// Display
+.flex(@justify:center, @align:center){
+    display: flex;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+//Styles
+.btn(@border-radius:15px, @width:200px, @height:40px){
+    border-radius: @border-radius;
+    background-color: @eastern-blue;
+    color: @white;
+    width: @width;
+    height: @height;
+}
+
+.hover(@color, @bgColor, @time, @option){
+    color: @color;
+    background-color: @bgColor;
+    transition: @time @option;
+}
+
+//Media Queries
+@292: ~"(max-width: 292px)";
+@mobile: ~"(max-width: 500px)";
+@450: ~"(max-width: 450px)";
+@650: ~"(max-width: 650px)";
+
